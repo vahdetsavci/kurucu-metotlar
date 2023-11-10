@@ -25,22 +25,21 @@ class Program
             * Protected
         */
 
-        Calisan calisan1 = new Calisan();
-        calisan1.Ad = "Ayşe";
-        calisan1.Soyad = "Kara";
-        calisan1.No = 234225634;
-        calisan1.Departman = "İnsan Kaynakları";
-
+        Console.WriteLine("************Calışan 1************");
+        Calisan calisan1 = new Calisan("Ayşe", "Kara", 234225634, "İnsan Kaynakları");
         calisan1.CalisanBilgileri();
-        Console.WriteLine("************************");
 
+        Console.WriteLine("************Çalışan 2************");
         Calisan calisan2 = new Calisan();
         calisan2.Ad = "Derya";
         calisan2.Soyad = "Yılmaz";
         calisan2.No = 256646984;
         calisan2.Departman = "Satın Alma";
-
         calisan2.CalisanBilgileri();
+        
+        Console.WriteLine("************Çalışan 3************");
+        Calisan calisan3 = new Calisan("Vahdet", "Savcı");
+        calisan3.CalisanBilgileri();
     }
 }
 
@@ -52,6 +51,11 @@ class Calisan
     internal string Departman;
 
     internal Calisan(){}
+    internal Calisan(string ad, string soyad)
+    {
+        this.Ad = ad;
+        this.Soyad = soyad;
+    }
     internal Calisan(string ad, string soyad, int no, string departman)
     {
         this.Ad = ad;
